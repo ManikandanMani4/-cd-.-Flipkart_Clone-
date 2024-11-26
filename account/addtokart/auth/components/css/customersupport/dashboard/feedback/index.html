@@ -1,0 +1,1072 @@
+@@ -0,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <title>Licensing| Flipkart</title>
+  <link rel="icon" type="image/x-icon" href="img/flipkart_lite.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f3f6;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    header {
+      background-color: #2874f0;
+      padding: 10px 20px;
+    }
+    nav .logo {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    #header-bluebg .secondNav a {
+      color: #fff !important;
+    }
+    header-bluebg a,
+    #more_h {
+      text-decoration: none !important;
+      color: #f9fafb !important;
+      font-weight: 600 !important;
+    }
+    .faq-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .faq-section h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .faq-container {
+      margin-top: 20px;
+    }
+    .faq {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-question h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .faq-toggle {
+      font-size: 24px;
+      color: #2874f0;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer p {
+      margin: 0;
+      padding: 10px 0;
+    }
+    .navbar-brand img {
+      width: 120px;
+    }
+    .searchBar_h {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .searchBar_h input {
+      flex: 1;
+      padding: 5px 10px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid #ccc;
+    }
+    .searchBar_h i {
+      padding: 5px 10px;
+      border-radius: 0 5px 5px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-left: 0;
+      cursor: pointer;
+    }
+    .btn-primary a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .b_a_s,
+    #more_h,
+    .cartLogoandname {
+      margin-left: 10px;
+    }
+    .cartLogoandname img {
+      width: 20px;
+    }
+    .secondNav .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      color: #000;
+    }
+    .secondNav .nav-link i {
+      margin-left: 5px;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28155,155,155,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    #more_h {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      padding: 5px 10px;
+      color: #fff;
+    }
+    #more-options {
+      display: none;
+      background-color: white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
+    }
+    #more_h:hover #more-options {
+      display: block;
+    }
+    .option-item {
+      color: #f4c3c3;
+      padding: 5px 0;
+      text-decoration: none;
+      display: block;
+      font-size: 13px;
+      transition: all 0.78s;
+    }
+    .option-item:hover {
+      text-decoration: none;
+      background-color: #ccc;
+      transition: all 0.78s;
+    }
+    main {
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .legal-heading {
+      font-size: 24px;
+      color: #2874f0;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .legal-tagline {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+    .legal-para {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #666;
+      line-height: 1.8;
+    }
+    footer {
+      background-color: rgb(6, 23, 46);
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="logo" style="background-image: url('img/flipkart_lite.png');"></div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header id="header-bluebg">
+    <nav class="container-fluid" style="background-color: #2874F0;">
+      <div class="container">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../">
+              <img src="../img/flipcartlogo.PNG" alt="Brand Logo">
+            </a>
+            <div class="searchBar_h">
+              <input id="inputField_h" type="text" autocomplete="off"
+                placeholder="Search for products, brands and more">
+              <i id="fetchButton_h" class="bi bi-search btn"></i>
+            </div>
+            <div>
+              <button class="btn btn-primary"><a href="../account/login-signup.html">Login</a></button>
+            </div>
+            <div class="text-white b_a_s">
+              <a href="../sell-online/">Become a Seller</a>
+            </div>
+            <div class="text-white" id="more_h">
+              More <i class="bi bi-chevron-down"></i>
+              <div id="more-options">
+                <a class="option-item" href="../gift-cards/index.html">Gift-Cards</a>
+                <a class="option-item" href="../plus/index.html">Flipkart+</a>
+                <a class="option-item" href="../account/contact.html">Contact Us</a>
+              </div>
+            </div>
+            <div class="text-white cartLogoandname">
+              <a href="../viewcart/">
+                <img src="../img/svg/cart_h.svg" alt="Cart"><span class="cart_h" style="color:white">Cart</span><span
+                  id="cartItems"></span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary secondNav container-fluid">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=electronics">Electronics <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=appliances">TVs & Appliances <i
+                  class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=men">Men <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=women">Women <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=kids">Baby & Kids <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=home">Home & Furniture <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=books">Sports, Books & More <i
+                  class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=flights">Flights <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../offerpage/offerportal.html">Offer Zone <i class="bi bi-chevron-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../search/?query=grocery">Grocery <i class="bi bi-chevron-down"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- JavaScript -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <main>
+    <h2 class="legal-heading">MIT License</h2>
+    <p class="legal-tagline">Copyright (c) 2024 Arghadip Manna</p>
+    <p class="legal-para">
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software"), to deal
+      in the Software without restriction, including without limitation the rights
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      copies of the Software,<br> to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:
+    </p>
+    <p class="legal-para">
+      The above copyright notice and this permission notice shall be included in all
+      copies or substantial portions of the Software.
+    </p>
+    <p class="legal-para">
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. <br> IN NO EVENT SHALL THE
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+      SOFTWARE.
+    </p>
+  </main>
+  <footer>
+    <div class="container-fluid footerTop">
+      <div class="row footer1">
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footerI">
+            <h5>ABOUT</h5>
+            <ul>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Flipkart Stories</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Corporate Information</a></li>
+              <li><i><a href="">Explore Plus</a></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footerI">
+            <h5>GROUP COMPANIES</h5>
+            <ul>
+              <li><a href="https://www.myntra.com/">Myntra</a></li>
+              <li><a href="https://www.flipkartwholesale.com/">Flipkart Wholesale</a></li>
+              <li><a href="https://www.cleartrip.com/">Cleartrip</a></li>
+              <li><a href="https://www.shopsy.in/">Shopsy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footerI">
+            <h5>HELP</h5>
+            <ul>
+              <li><a href="">Payments</a></li>
+              <li><a href="">Shipping</a></li>
+              <li><a href="">Cancellation & Returns</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Report Infringement</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footerI">
+            <h5>CONSUMER POLICY</h5>
+            <ul>
+              <li><a href="">Cancellation & Returns</a></li>
+              <li><a href="">Terms Of Use</a></li>
+              <li><a href="">Security</a></li>
+              <li><a href="../pages/privacypolicy/index.html">Privacy</a></li>
+              <li><a href="">Sitemap</a></li>
+              <li><a href="">Grievance Redressal</a></li>
+              <li><a href="">EPR Compilance</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mailSocial">
+          <div class="footerI">
+            <div class="mail">
+              <h5>Mail Us:</h5>
+              <p>
+                Flipkart Internet Private Limited,
+                Buildings Alyssa, Begonia & Clove Embassy Tech Village,
+                Outer Ring Road, Devarabeesanahalli Village, Bengaluru, 560103, Karnataka, India
+              </p>
+            </div>
+            <div class="social">
+              <h5>Social</h5>
+              <ul>
+                <li><a href="https://www.facebook.com/flipkart/"><img
+                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjkzMzEgMjFDMTcuOTAzNyAyMSAyMS45MzMxIDE2Ljk3MDYgMjEuOTMzMSAxMkMyMS45MzMxIDcuMDI5NDQgMTcuOTAzNyAzIDEyLjkzMzEgM0M3Ljk2MjU0IDMgMy45MzMxMSA3LjAyOTQ0IDMuOTMzMTEgMTJDMy45MzMxMSAxNi45NzA2IDcuOTYyNTQgMjEgMTIuOTMzMSAyMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY4MzEgOC4yNUgxNS4xODMxQzE0LjU4NjQgOC4yNSAxNC4wMTQxIDguNDg3MDUgMTMuNTkyMSA4LjkwOTAxQzEzLjE3MDIgOS4zMzA5NyAxMi45MzMxIDkuOTAzMjYgMTIuOTMzMSAxMC41VjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjkzMzExIDEzLjVIMTUuOTMzMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
+                      alt=""></a></li>
+                <li><a href="https://twitter.com/Flipkart"><img
+                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4M18yMCkiPgo8cGF0aCBkPSJNMTMuNTQzNiAxMC42MTc5TDIwLjA5NzEgM0gxOC41NDQxTDEyLjg1MzcgOS42MTQ0OEw4LjMwODg3IDNIMy4wNjY4OUw5LjkzOTY0IDEzLjAwMjNMMy4wNjY4OSAyMC45OTA4SDQuNjE5OTRMMTAuNjI5MSAxNC4wMDU2TDE1LjQyODggMjAuOTkwOEgyMC42NzA4TDEzLjU0MzIgMTAuNjE3OUgxMy41NDM2Wk0xMS40MTY1IDEzLjA5MDRMMTAuNzIwMiAxMi4wOTQ0TDUuMTc5NTMgNC4xNjkxMUg3LjU2NDkxTDEyLjAzNjMgMTAuNTY1MUwxMi43MzI2IDExLjU2MTFMMTguNTQ0OCAxOS44NzQ4SDE2LjE1OTVMMTEuNDE2NSAxMy4wOTA4VjEzLjA5MDRaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE4M18yMCI+CjxyZWN0IHg9IjMuMDY2ODkiIHk9IjMiIHdpZHRoPSIxNy42MDM5IiBoZWlnaHQ9IjE4IiByeD0iMC4yIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                      alt=""></a></li>
+                <li><a href="https://www.youtube.com/flipkart"><img
+                      src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/YoutubeLogo-8425c4.svg"
+                      alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footerI">
+            <h5>Registered Office Address:</h5>
+            <p>Flipkart Internet Private Limited,
+              Buildings Alyssa, Begonia & Clove Embassy Tech Village,
+              Outer Ring Road, Devarabeesanahalli Village, Bengaluru, 560103, Karnataka, India</p>
+            <p>CIN : U51109KA2012PTC066107</p>
+            <P>Telephone: <a class="text-primary" href="tel:044-45614700"> 044-45614700 </a>
+              / <a class="text-primary" href="tel:044-67415800"> 044-67415800
+              </a>
+            </P>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footerEnd">
+      <div class="row align-items-center" style="display: flex; width: 100vw; flex-wrap: wrap;">
+        <div class="col-auto">
+          <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/sell-image-9de8ef.svg"
+            alt="Become a Seller" width="13" height="12">
+          <a href="https://seller.flipkart.com/?utm_source=fkwebsite&amp;utm_medium=websitedirect"
+            aria-label="Become a Seller"><span>Become a Seller</span></a>
+        </div>
+        <div class="col-auto">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/advertise-image-866c0b.svg"
+            alt="Advertise" width="14" height="14">
+          <a href="https://brands.flipkart.com" aria-label="Advertise"><span>Advertise</span></a>
+        </div>
+        <div class="col-auto">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/gift-cards-image-d7ff24.svg"
+            alt="Gift Cards" width="13" height="13">
+          <a href="https://www.flipkart.com/the-gift-card-store?otracker=${otracker}_footer_navlinks"
+            aria-label="Gift Cards"><span>Gift Cards</span></a>
+        </div>
+        <div class="col-auto">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/help-centre-image-c4ace8.svg"
+            alt="Help Center" width="13" height="13">
+          <a href="https://www.flipkart.com/helpcentre?otracker=${otracker}_footer_navlinks"
+            aria-label="Help Center"><span>Help Center</span></a>
+        </div>
+        <div class="col-auto">
+          <span>© 2007-2024 <span>Flipkart.com</span></span>
+        </div>
+        <div class="col-auto ">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-c454fb.svg"
+            class="pCGSTEF" alt="Payment methods">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const faqAnswer = item.nextElementSibling;
+        const faqToggle = item.querySelector('.faq-toggle');
+        const isOpen = faqAnswer.style.maxHeight;
+        // Close all open FAQ answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+          answer.style.maxHeight = null;
+          answer.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+        });
+        // Toggle the clicked FAQ answer
+        if (!isOpen) {
+          faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+          faqToggle.textContent = '-';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+‎account/orders.html
++138
+-219
+Original file line number	Diff line number	Diff line change
+@@ -6,278 +6,197 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2874F0" id="themeColor" />
+    <title>
+        Flipkart | Online Shopping Site for Mobiles, Electronics, Furniture,
+        Grocery, Lifestyle, Books &amp; More. Best Offers!
+        Flipkart | Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!
+    </title>
+    <link rel="icon" type="image/x-icon" href="../img/flipkart_lite.png" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/orders.css" />
+</head>
+
+<header id="header-orders" class="text-center text-secondary fs-4">
+    This is Header
+</header>
+<body>
+    <header id="header-orders" class="text-center text-secondary fs-4">
+        This is Header
+    </header>
+
+<section>
+    <div class="containers">
+        <div id="filtersBox">
+            <div class="filtersTitle">
+                <span>Filters</span>
+            </div>
+            <div class="orderStatus">
+                <div id="info"><b>ORDER STATUS</b></div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">On the Way</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">Delivered</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">Cancelled</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">Returned</span>
+                </div>
+            </div>
+            <div class="orderTime">
+                <div id="info"><b>ORDER TIME</b></div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">Last 30 days</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">2023</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">2022</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">2021</span>
+    <section class="container">
+        <div class="row">
+            <div id="filtersBox" class="col-lg-3">
+                <div class="filtersTitle">
+                    <span>Filters</span>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">2020</span>
+                <div class="orderStatus">
+                    <div id="info"><b>ORDER STATUS</b></div>
+                    <div class="opt">
+                        <input type="checkbox" id="status1">
+                        <label for="status1">On the Way</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="status2">
+                        <label for="status2">Delivered</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="status3">
+                        <label for="status3">Cancelled</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="status4">
+                        <label for="status4">Returned</label>
+                    </div>
+                </div>
+                <div class="opt">
+                    <input type="checkbox"><span style="padding-left: 5px">Older</span>
+                <div class="orderTime">
+                    <div id="info"><b>ORDER TIME</b></div>
+                    <div class="opt">
+                        <input type="checkbox" id="time1">
+                        <label for="time1">Last 30 days</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="time2">
+                        <label for="time2">2023</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="time3">
+                        <label for="time3">2022</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="time4">
+                        <label for="time4">2021</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="time5">
+                        <label for="time5">2020</label>
+                    </div>
+                    <div class="opt">
+                        <input type="checkbox" id="time6">
+                        <label for="time6">Older</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column orders">
+            <div class="search">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search your orders here">
+                </div>
+                <button class="search-button">
+                    <div class="search-icon">
+                        <svg width="16" height="16" viewBox="0 0 17 18" class="icon" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#fff" fill-rule="evenodd">
+                                <path class=""
+                                    d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203">
+                                </path>
+                                <path class=""
+                                    d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467">
+                                </path>
+                            </g>
+                        </svg>
+                        <span>Search Orders</span>
+            <div class="col-lg-9">
+                <div class="search mb-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control search-input" placeholder="Search your orders here">
+                        <button class="btn btn-primary search-button">
+                            <i class="bi bi-search"></i> Search Orders
+                        </button>
+                    </div>
+                </button>
+            </div>
+            
+            <div class="row orders">
+            <div class="orderContainer">
+                </div>
+                <div class="orders">
+                    <div class="row order-row">
+                        <div class="col-details">
+                            <div class="row">
+                                <div class="col-image">
+                                    <div class="img-container">
+                                        <div class="img" style="height: 100px; width: 100px;">
+                                            <img class="img1" alt="OnePlus12"
+                                                src="https://images-cdn.ubuy.co.in/65a4d1da79c8e03a06140a3c-oneplus-12-24gb-1tb-6-82-amoled.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-description">
+                                    <div class="details-text">
+                                        <span class="row item names">OnePlus 12 (Flowy Emerald, 256 GB) (12 GB
+                                            RAM)</span>
+                                        <div class="row attributes">
+                                            <span class="color-attribute">
+                                                <span class="type">Color: </span>
+                                                <span class="val">Flowy Emerald</span>
+                                            </span>
+                                            <span class="size-attribute">
+                                                <span class="type">Size: </span>
+                                                <span class="val">256 GB</span>
+                                            </span>
+                                        </div>
+                    <div class="orderContainer mb-4">
+                        <div class="row order-row align-items-center">
+                            <div class="col-image col-auto">
+                                <img class="img-fluid" alt="OnePlus12" src="https://images-cdn.ubuy.co.in/65a4d1da79c8e03a06140a3c-oneplus-12-24gb-1tb-6-82-amoled.jpg">
+                            </div>
+                            <div class="col-description col">
+                                <div class="details-text">
+                                    <span class="item names">OnePlus 12 (Flowy Emerald, 256 GB) (12 GB RAM)</span>
+                                    <div class="attributes">
+                                        <span class="color-attribute"><b>Color:</b> Flowy Emerald</span>
+                                        <span class="size-attribute"><b>Size:</b> 256 GB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-price">
+                            ₹59,299
+                        </div>
+                        <div class="col-status">
+                            <div>
+                                <div class="circle"></div>
+                            <div class="col-price col-auto">
+                                ₹59,299
+                            </div>
+                            <div class="col-status col-auto text-center">
+                                <div class="circle bg-success"></div>
+                                <span class="date">Delivered on May 2</span>
+                                <div class="msg">Your item has been delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="orderContainer">
+                <div class="orders">
+                    <div class="row order-row">
+                        <div class="col-details">
+                            <div class="row">
+                                <div class="col-image">
+                                    <div class="img-container">
+                                        <div class="img" style="height: 100px; width: 100px;">
+                                            <img class="img1" alt="Tanso Jinsei Full Graphite"
+                                                src="https://rukminim2.flixcart.com/image/850/1000/xif0q/racquet/y/4/l/g4-3-25-inches-strung-jinsei-full-graphite-ultra-light-weight-original-imagx7vy2fachrzb.jpeg?q=90&crop=false">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-description">
+                                    <div class="details-text">
+                                        <span class="row item names">Tanso Jinsei Full Graphite Ultra Light W...</span>
+                                        <div class="row attributes">
+                                            <span class="color-attribute">
+                                                <span class="type">Color: </span>
+                                                <span class="val">White</span>
+                                            </span>
+                                            <span class="size-attribute">
+                                                <span class="type"></span>
+                                                <span class="val"></span>
+                                            </span>
+                                        </div>
+                    <div class="orderContainer mb-4">
+                        <div class="row order-row align-items-center">
+                            <div class="col-image col-auto">
+                                <img class="img-fluid" alt="Tanso Jinsei Full Graphite" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/racquet/y/4/l/g4-3-25-inches-strung-jinsei-full-graphite-ultra-light-weight-original-imagx7vy2fachrzb.jpeg?q=90&crop=false">
+                            </div>
+                            <div class="col-description col">
+                                <div class="details-text">
+                                    <span class="item names">Tanso Jinsei Full Graphite Ultra Light W...</span>
+                                    <div class="attributes">
+                                        <span class="color-attribute"><b>Color:</b> White</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-price">
+                            ₹1,039
+                        </div>
+                        <div class="col-status">
+                            <div>
+                                <div class="circle"></div>
+                            <div class="col-price col-auto">
+                                ₹1,039
+                            </div>
+                            <div class="col-status col-auto text-center">
+                                <div class="circle bg-success"></div>
+                                <span class="date">Delivered on Apr 20</span>
+                                <div class="msg">Your item has been delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="orderContainer">
+                <div class="orders">
+                    <div class="row order-row">
+                        <div class="col-details">
+                            <div class="row">
+                                <div class="col-image">
+                                    <div class="img-container">
+                                        <div class="img" style="height: 100px; width: 100px;">
+                                            <img class="img1" alt="Apple 2020 Macbook Air"
+                                                src="https://shoplet.pl/286301-large_default/apple-macbook-air-m1-133-wqxga-8gb-256gb-mac-os-srebrny.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-description">
+                                    <div class="details-text">
+                                        <span class="row item names">Apple 2020 Macbook Air Apple M1 ..</span>
+                                        <div class="row attributes">
+                                            <span class="color-attribute">
+                                                <span class="type">Color: </span>
+                                                <span class="val">Space Grey</span>
+                                            </span>
+                                            <span class="size-attribute">
+                                                <span class="type">Size: </span>
+                                                <span class="val">13.3 inch</span>
+                                            </span>
+                                        </div>
+                    <div class="orderContainer mb-4">
+                        <div class="row order-row align-items-center">
+                            <div class="col-image col-auto">
+                                <img class="img-fluid" alt="Apple 2020 Macbook Air" src="https://shoplet.pl/286301-large_default/apple-macbook-air-m1-133-wqxga-8gb-256gb-mac-os-srebrny.jpg">
+                            </div>
+                            <div class="col-description col">
+                                <div class="details-text">
+                                    <span class="item names">Apple 2020 Macbook Air Apple M1 ..</span>
+                                    <div class="attributes">
+                                        <span class="color-attribute"><b>Color:</b> Space Grey</span>
+                                        <span class="size-attribute"><b>Size:</b> 13.3 inch</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-price">
+                            ₹73,990
+                        </div>
+                        <div class="col-status">
+                            <div>
+                                <div class="circle"></div>
+                            <div class="col-price col-auto">
+                                ₹73,990
+                            </div>
+                            <div class="col-status col-auto text-center">
+                                <div class="circle bg-success"></div>
+                                <span class="date">Delivered on Mar 17</span>
+                                <div class="msg">Your item has been delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="orderContainer">
+                <div class="orders">
+                    <div class="row order-row">
+                        <div class="col-details">
+                            <div class="row">
+                                <div class="col-image">
+                                    <div class="img-container">
+                                        <div class="img" style="height: 100px; width: 100px;">
+                                            <img class="img1" alt="CASIO FX-350MS 2nd Edition Scientific Calculator"
+                                                src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/calc/product/scientific/F/FX/FX3/fx-350EX/fx-350EX_Seq1.jpg.transform/main-visual-sp/image.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-description">
+                                    <div class="details-text">
+                                        <span class="row item names">CASIO FX-350MS 2nd Edition Scientific C...</span>
+                                        <div class="row attributes">
+                                            <span class="color-attribute">
+                                                <span class="type">Color: </span>
+                                                <span class="val">Black</span>
+                                            </span>
+                                            <span class="size-attribute">
+                                                <span class="type">Size: </span>
+                                                <span class="val">Medium</span>
+                                            </span>
+                                        </div>
+                    <div class="orderContainer mb-4">
+                        <div class="row order-row align-items-center">
+                            <div class="col-image col-auto">
+                                <img class="img-fluid" alt="CASIO FX-350MS 2nd Edition Scientific Calculator" src="https://www.casio.com/content/dam/casio/product-info/locales/intl/en/calc/product/scientific/F/FX/FX3/fx-350EX/fx-350EX_Seq1.jpg.transform/main-visual-sp/image.jpg">
+                            </div>
+                            <div class="col-description col">
+                                <div class="details-text">
+                                    <span class="item names">CASIO FX-350MS 2nd Edition Scientific C...</span>
+                                    <div class="attributes">
+                                        <span class="color-attribute"><b>Color:</b> Black</span>
+                                        <span class="size-attribute"><b>Size:</b> Medium</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-price">
+                            ₹660
+                        </div>
+                        <div class="col-status">
+                            <div>
+                                <div class="circle"></div>
+                            <div class="col-price col-auto">
+                                ₹660
+                            </div>
+                            <div class="col-status col-auto text-center">
+                                <div class="circle bg-success"></div>
+                                <span class="date">Delivered on Jan 20</span>
+                                <div class="msg">Your item has been delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="end text-center">
+                        <span>No more results to display</span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row orders">
+        <div class="end">
+            <div class="of-orders"><span>No more results to display</span></div>
+        </div>
+    </div>
+</section>
+    </section>
+
+<footer id="footer-orders" style="background-color: #293649 !important"></footer>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/orders.js"></script>
+    <footer id="footer-orders" class="text-white text-center py-3" style="background-color: #293649;">
+        Footer Content
+    </footer>
+
+<body></body>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/orders.js"></script>
+</body>
+
+</html>
+‎footer/footer.html
++1
+Original file line number	Diff line number	Diff line change
+@@ -76,6 +76,7 @@ <h5>CONSUMER POLICY</h5>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+‎index.html
++80
+-79
+Original file line number	Diff line number	Diff line change
+@@ -654,85 +654,7 @@ <h4>Login</h4>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-1 mx-auto flex flex-wrap">
+            <!-- Step 1 -->
+            <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Product Discovery</h2>
+                        <p class="leading-relaxed">Explore a wide range of products available on our platform. From electronics to fashion, find everything in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Add to Cart</h2>
+                        <p class="leading-relaxed">Easily add products to your cart and review your selections. Our intuitive interface makes shopping a breeze.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Secure Checkout</h2>
+                        <p class="leading-relaxed">Proceed to checkout with confidence. Our secure payment gateway ensures your information is safe.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Fast Delivery</h2>
+                        <p class="leading-relaxed">Enjoy fast and reliable delivery to your doorstep. Track your order and get updates in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- carousel start -->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+@@ -833,6 +755,85 @@ <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Fast Delivery</h2>
+    <img src="img/1a (2).png" alt="" class="img-fluid" width="100%">
+    <img src="img/1a (3).png" alt="" class="img-fluid" width="100%">
+    <img src="img/1a (4).png" alt="" class="img-fluid" width="100%">
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-1 mx-auto flex flex-wrap">
+            <!-- Step 1 -->
+            <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Product Discovery</h2>
+                        <p class="leading-relaxed">Explore a wide range of products available on our platform. From electronics to fashion, find everything in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Add to Cart</h2>
+                        <p class="leading-relaxed">Easily add products to your cart and review your selections. Our intuitive interface makes shopping a breeze.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Secure Checkout</h2>
+                        <p class="leading-relaxed">Proceed to checkout with confidence. Our secure payment gateway ensures your information is safe.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                    <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Fast Delivery</h2>
+                        <p class="leading-relaxed">Enjoy fast and reliable delivery to your doorstep. Track your order and get updates in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img src="img/1a (5).png" alt="" class="img-fluid" width="100%">
+    <img src="img/1a (6).png" alt="" class="img-fluid" width="100%">
+    <img src="img/1a (7).png" alt="" class="img-fluid" width="100%">
