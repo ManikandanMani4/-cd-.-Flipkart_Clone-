@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2874F0" id="themeColor">
+    <title>Flipkart | Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More.
+        Best Offers!</title>
+    <link rel="icon" type="image/x-icon" href="img/flipkart_lite.png">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/homeHeader.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="css/contactus.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2874F0" id="themeColor">
+    <title>Flipkart | Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More.
+        Best Offers!</title>
+    <link rel="icon" type="image/x-icon" href="img/flipkart_lite.png">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/homeHeader.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+
+    <link href="css/contactus.css" rel="stylesheet">
+
+    <style>
+           body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .flex {
+            display: flex;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .flex-col {
+            flex-direction: column;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .relative {
+            position: relative;
+        }
+        .w-6 {
+            width: 1.5rem;
+        }
+        .h-6 {
+            height: 1.5rem;
+        }
+        .h-full {
+            height: 100%;
+        }
+        .w-full {
+            width: 100%;
+        }
+        .mt-10 {
+            margin-top: 2.5rem;
+        }
+        .pt-10 {
+            padding-top: 2.5rem;
+        }
+        .pb-10 {
+            padding-bottom: 2.5rem;
+        }
+        .pb-20 {
+            padding-bottom: 5rem;
+        }
+        .rounded-full {
+            border-radius: 50%;
+        }
+        .bg-gray-200 {
+            background-color: #e5e5e5;
+        }
+        .bg-indigo-500 {
+            background-color: #6366f1;
+        }
+        .bg-indigo-100 {
+            background-color: #ebf4ff;
+        }
+        .text-white {
+            color: #ffffff;
+        }
+        .text-gray-600 {
+            color: #718096;
+        }
+        .text-gray-900 {
+            color: #1a202c;
+        }
+        .title-font {
+            font-weight: 600;
+        }
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        .text-xl {
+            font-size: 1.25rem;
+        }
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        .mb-1 {
+            margin-bottom: 0.25rem;
+        }
+        .md-w-2-3 {
+            width: 66.666667%;
+        }
+        .md-pl-8 {
+            padding-left: 2rem;
+        }
+        .pl-6 {
+            padding-left: 1.5rem;
+        }
+        .sm-items-center {
+            align-items: center;
+        }
+        .sm-mt-0 {
+            margin-top: 0;
+        }
+        .sm-pl-6 {
+            padding-left: 1.5rem;
+        }
+        .pointer-events-none {
+            pointer-events: none;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .scrollToTop {
+            height: 40px;
+            width: 40px;
+            background: hsl(217, 87%, 45%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            bottom: 45px;
+            right: 50%;
+            left: 50%;
+        }
+            .inner {
+                height: 85%;
+                width: 85%;
+                background: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+
+        .r4vIwl{
+            padding: 8px 10px 10px 0;
+    width: 100%;
+    color: #000;
+    font-size: inherit;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+        
+
+        /* } */
+
+    #progress-container {
+    position: fixed ;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+}
+
+#progress-bar {
+    height: 53%;
+    width: 0;
+    background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+    box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-container button#button {
+        margin-left: 0 !important;
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+    </style>
+
+
+</head>
+
+<body>
+    <!-- loader -->
+    <!-- <div id="loader">
+		<div class="loader-spinner"></div>
+		<img src="img/flipkardLoader.png" height="50px" alt="">
+	</div> -->
+    <div class="loader-container">
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+            <div class="logo" style="background-image: url('img/flipkart_lite.png');"></div>
+        </div>
+    </div>
+    <!-- loader end -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <script>
+            
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        </script>
+      
+  
+    <div id="divA" class="popup-container">
+        <div class="signupin">
+            <div class="leftpanal">
+                <h4>Login</h4>
+                <p>Get access to your Orders, Wishlist and Recommendations</p>
+            </div>
+            <div class="rightSignuppanal">
+                <span class="close-btn" id="close-btn">&times;</span>
+                <form autocomplete="on">
+                    <div class="I-qZ4M vLRlQb">
+                        <input autocomplete="off" id="inputsin" type="text" class="r4vIwl BV+Dqf" value=""
+                            required="" />
+                        <label class="Gq-80a" id="inputsin"><span>Enter Email/Mobile </span></label>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="EpHS0A">By continuing, you agree to Flipkart's
+                        <a class="c9RDXR" target="_blank" href="../pages/terms/">Terms of Use</a> and
+                        <a class="c9RDXR" target="_blank" href="../pages/privacypolicy/index.html">Privacy Policy</a>.
+                    </div>
+                    <div class="LSOAQH mt-2">
+                        <button class="QqFHMw twnTnD _7Pd1Fp">Request OTP</button>
+                    </div>
+                    <div class="ZJ3AS1 d-flex justify-content-center mt-4">
+
+                        <a class="azBkHf" href="account/login-signup.html" id="buttonA">New to Flipkart? Create an account</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show the popup when the page loads
+            const popupContainer = document.getElementById("divA");
+            popupContainer.style.display = "flex";
+
+            // Hide the popup when the close button is clicked
+            const closeBtn = document.getElementById("close-btn");
+            closeBtn.addEventListener("click", function () {
+                popupContainer.style.display = "none";
+            });
+
+            // Prevent form submission from reloading the page and close the popup
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                // Your form submission logic here, e.g., AJAX call
+                console.log("Form submitted");
+                // Close the popup
+                popupContainer.style.display = "none";
+            });
+        });
+    </script>
+    <style>
+        #divA {
+            display: none;
+            /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure the popup is above other content */
+        }
+
+        .signupin {
+            /* background: #f1f3f6; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .signupin .leftpanal {
+            padding: 20px;
+            background-color: #2874F0;
+            color: #fff;
+            background-image: url(../img/login_img_bg.png);
+            background-position: center 85%;
+            background-repeat: no-repeat;
+            height: 400px;
+            width: 20vw;
+        }
+        .signupin .leftpanal p{
+            color:rgb(220, 219, 219);
+        }
+        .signupin .rightSignuppanal {
+            padding: 20px;
+            background: #fff;
+            height: 400px;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        ._7Pd1Fp {
+            justify-self: flex-start;
+            background: #fb641b;
+            width: 100%;
+            padding: 5px;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+            border: none;
+            color: #fff;
+        }
+
+        .EpHS0A {
+            font-size: 11px;
+        }
+
+        .I-qZ4M  {
+            position: relative;
+    margin-bottom: 34px;
+    font-size: 16px;
+        }
+        .Gq-80a {
+            color: #878787;
+            font-size: 16px;
+            font-weight: 400;
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+            transition: -webkit-transform .2s ease;
+            transition: transform .2s ease;
+            transition: transform .2s ease, -webkit-transform .2s ease;
+            will-change: transform;
+           -webkit-transform-origin: left;
+            transform-origin: left;
+        }
+
+        .Gq-80a:focus{
+            border-bottom: 2px solid #2874F0;
+        }
+
+        .I-qZ4M .vLRlQb input[type="text"] {
+            font-size: 20px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            padding: 5px 0;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .I-qZ4M .vLRlQb .label {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            color: #ccc;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .I-qZ4M .vLRlQb input[type="text"]:focus~.label,
+        .I-qZ4M .vLRlQb input[type="text"]:valid~.label {
+            top: -20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .I-qZ4M .vLRlQb .underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #333;
+            transform: scaleX(0);
+            transition: all 0.3s ease;
+        }
+
+        .I-qZ4M .vLRlQb input[type="text"]:focus~.underline,
+        .I-qZ4M .vLRlQb input[type="text"]:valid~.underline {
+            transform: scaleX(1);
+            background-color: #2874F0;
+        }
+
+        #seletcYourChoice-product .products {
+            margin: 0 auto;
+            padding: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #seletcYourChoice-product .products:hover {
+            transform: scale(1.1);
+            opacity: 0.82;
+        }
+
+        /* Hover effect for "Best Deal for You" section */
+#best-deal-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#best-deal-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Shop Now Under 500 Rs" section */
+#shopUnder500-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#shopUnder500-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Top Selection" section */
+#top-selection-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#top-selection-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Mobile Phone Under 15000 Rs" section */
+#mobileUnder15000-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobileUnder15000-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Suggested for You" section */
+#rendom-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#rendom-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Best of Electronics" section */
+#bestOfElectronics-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#bestOfElectronics-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Best Deal for You" section */
+#best-deal-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#best-deal-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Shop Now Under 500 Rs" section */
+#shopUnder500-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#shopUnder500-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Top Selection" section */
+#top-selection-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#top-selection-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Select Your Choice" section */
+#seletcYourChoice-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#seletcYourChoice-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Mobile Phone Under 15000 Rs" section */
+#mobileUnder15000-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobileUnder15000-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Suggested for You" section */
+#rendom-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#rendom-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for "Best of Electronics" section */
+#bestOfElectronics-product .products {
+    margin: 0 auto;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#bestOfElectronics-product .products:hover {
+    transform: scale(1.1);
+    opacity: 0.82;
+}
+
+/* Hover effect for FAQ section */
+.faq-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Hover effect for "Search Bar"  */
+#searchbar input {
+    transition: border-color 0.3s ease-in-out;
+}
+
+#searchbar input:focus {
+    border-color: #2874F0; /* Change the border color on focus */
+}
+
+/* Hover effect for "Account Dropdown"  */
+#navbarDropdown .nav-link img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#navbarDropdown .nav-link img:hover {
+    transform: scale(1.1);
+}
+
+/* Hover effect for "Cart Icon"  */
+.cartLogoandname img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cartLogoandname img:hover {
+    transform: scale(1.1);
+}
+
+/* Hover effect for "Become a Seller Icon"  */
+.navItem4 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navItem4 img:hover {
+    transform: scale(1.1);
+}
+
+/* Hover effect for "More Links Dropdown"  */
+#moreLinksDropdown .nav-link img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#moreLinksDropdown .nav-link img:hover {
+    transform: scale(1.1);
+}
+
+        @media screen and (max-width: 1200px) {
+            .signupin .leftpanal {
+                width: 30vw;
+            }
+
+            .signupin .rightSignuppanal {
+                width: 40vw;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .signupin .leftpanal {
+                width: 35vw;
+                padding: 15px;
+            }
+
+            .signupin .rightSignuppanal {
+                width: 45vw;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .signupin .leftpanal {
+                width: 43vw;
+                padding: 5px;
+            }
+
+            .signupin .rightSignuppanal {
+                width: 56vw;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .temporary-login-btn{
+            color:white;
+            text-decoration:none;
+            padding-right:20px;
+            padding-left:20px;
+            padding-bottom:5px;
+            background: #2a55e5;
+            margin-left:950px;
+            z-index:1000!important;
+       }
+    </style>
+
+
+    <!--Header start  -->
+    <!--Header start  -->
+    <header id="homeHeader">
+        <nav class="navbar homeHeader navbar-expand-lg navbar-light bg-light">
